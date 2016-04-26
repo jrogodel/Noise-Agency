@@ -6,7 +6,7 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Noise Co." %></title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
@@ -14,7 +14,39 @@
     <%= javascript_include_tag :all %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body>
+    <header class="header">
+      <h1>Noise Co.</h1>
+      Welcome, Jamie
+      <a href="#">My Account</a>      
+      <a href="#">Logout</a>
+    </header>
+
+    <nav class="nav site-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+
     <%= yield %>
+
+    <h2>Noise Co.</h2>
+    <small>© 2015 NoiseCo. All rights reversed.</small>
+    <nav class="nav footer-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+
   </body>
 </html>
